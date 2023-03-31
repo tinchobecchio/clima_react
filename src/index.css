@@ -70,7 +70,9 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
 
 .btn-block {
   display: block!important;
+  width: 100%;
 }
+
 select.browser-default {
   margin-top: 3rem;
 }

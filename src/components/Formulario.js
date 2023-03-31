@@ -6,6 +6,8 @@ const Formulario = () => {
         ciudad: "",
         pais: ""
     })
+    const [error, guardarError ] = useState(false)
+
     // extraer ciudad y pais
     const { ciudad, pais } = busqueda;
 
@@ -16,8 +18,26 @@ const Formulario = () => {
             [e.target.name]: e.target.value
         })
     }
+
+    // Cuando el usuario da submit al form
+    const handleSubmit = e => {
+        e.preventDefault()
+
+        //validar
+        if(ciudad.trim() === '' || pais.trim() === '') {
+            guardarError(true)
+            return
+        }
+        guardarError(false)
+        //pasarlo al componente princpal
+    }
+
+
     return ( 
-        <form>
+        <form
+            onSubmit={handleSubmit}
+        >
+            {error ? <p className="red darken-4 error">Todos los campos son obligatorios</p> : null}
             <div className="input-field col s12">
                 <input 
                     type="text" 
@@ -51,6 +71,13 @@ const Formulario = () => {
 
                 <label htmlFor="pais">Pais: </label>
 
+            </div>
+            <div className="input-field col s12">
+                <button
+                    type="submit"
+                    value='Buscar Clima'
+                    className="waves-effect waves-light btn-large btn-block #00897b teal darken-1"
+                >Buscar Clima</button>
             </div>
 
         </form>
