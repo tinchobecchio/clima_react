@@ -4,34 +4,34 @@ body {
   font-family: sans-serif;
 }
 nav .brand-logo {
-display: block;
-text-align: center;
-position: relative;
+  display: block;
+  text-align: center;
+  position: relative;
 }
 .input-field label {
-color: white;
+  color: white;
 }
 
 .input-field input[type=text]:focus + label {
-color: white;
+  color: white;
 } 
 
 .input-field input[type=text]:focus {
-border-bottom: 1px solid white;
-box-shadow: 0 1px 0 0 #000;
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 #000;
 }
 
 input[type=text]:not(.browser-default) {
-border-bottom: 1px solid white;
-color: white;
+  border-bottom: 1px solid white;
+  color: white;
 }
 input[type=text]:not(.browser-default):focus:not([readonly]) {
-border-bottom: 1px solid white;
--webkit-box-shadow: 0 1px 0 0 white;
-box-shadow: 0 1px 0 0 white;
+  border-bottom: 1px solid white;
+  -webkit-box-shadow: 0 1px 0 0 white;
+  box-shadow: 0 1px 0 0 white;
 }
 input[type=text]:not(.browser-default):focus:not([readonly]) + label {
-color: white;
+  color: white;
 }
 
 .contenedor-form {
@@ -70,4 +70,7 @@ color: white;
 
 .btn-block {
   display: block!important;
+}
+select.browser-default {
+  margin-top: 3rem;
 }
