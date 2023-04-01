@@ -46,7 +46,7 @@ const Formulario = ({busqueda,guardarBusqueda,guardarConsultar}) => {
                 <label htmlFor="ciudad">Ciudad: </label>
             </div>
 
-            <div className="input-field col s12">
+            <div className="input-field col s12 este">
 
                 <select
                     className="browser-default"
