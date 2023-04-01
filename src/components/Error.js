@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 const Error = ({mensaje}) => {
     return ( 
@@ -5,4 +6,7 @@ const Error = ({mensaje}) => {
      );
 }
  
+Error.propTypes = {
+    mensaje: PropTypes.string.isRequired
+}
 export default Error;
