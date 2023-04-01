@@ -25,7 +25,7 @@ function App() {
       const APIKey = '448638023d93030a4c696e838adfc109'
       
       // consultar la geolocalizacion de la ciudad
-      const geo = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${APIKey}`)
+      const geo = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${APIKey}`)
       const data = await geo.json()
 
       if (data[0]) {
@@ -49,9 +49,10 @@ function App() {
     // para que no consulte si no hay nada y no consulte dos veces cuando cambia consulta por ser dependencia
     if(consultar){
       consultarAPI();
+      
     }
     guardarConsultar(false)
-
+    // eslint-disable-next-line
   },[consultar]);
 
   return (

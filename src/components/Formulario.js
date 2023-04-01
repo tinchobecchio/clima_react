@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from "react";
 import Error from "./Error";
+import { paises } from '../helper';
 
 const Formulario = ({busqueda,guardarBusqueda,guardarConsultar}) => {
 
@@ -58,13 +59,10 @@ const Formulario = ({busqueda,guardarBusqueda,guardarConsultar}) => {
                     onChange={handleChange}
                 >
                     <option value="">-- Seleccione un país --</option>
-                    <option value="US">Estados Unidos</option>
-                    <option value="MX">México</option>
-                    <option value="AR">Argentina</option>
-                    <option value="CO">Colombia</option>
-                    <option value="CR">Costa Rica</option>
-                    <option value="ES">España</option>
-                    <option value="PE">Perú</option>
+
+                    {paises.map(p => (
+                        <option key={p.codigo} value={p.codigo}>{p.pais}</option>
+                    ))}
 
                 </select>
 
